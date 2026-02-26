@@ -25,7 +25,7 @@ export default function Home() {
           <p className="text-stone-500 text-lg mb-12">This is a collection of stories that define Vancouver and its people.</p>
           <div className="flex flex-col gap-4">
             <Link href="/stories" style={{ backgroundColor: '#1B4886' }} className="text-white py-4 px-8 rounded-full text-lg hover:opacity-90 transition">
-              Read the Memories of Vancouver
+              Read the Stories of Vancouver
             </Link>
             <Link href="/start" style={{ borderColor: '#2D6A4F', color: '#2D6A4F' }} className="border-2 py-4 px-8 rounded-full text-lg hover:opacity-80 transition">
               Write Your Chapter...
