@@ -13,7 +13,7 @@ export default function Home() {
           alt="Urban Memoir banner"
           width={1200}
           height={500}
-          className="w-full h-[250px] object-cover rounded-2xl"
+          className="w-full h-[200px] object-cover rounded-2xl"
           priority
         />
       </div>
