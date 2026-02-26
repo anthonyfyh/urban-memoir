@@ -19,8 +19,7 @@ export const prompts = [
   { category: 'Stranger Kindness', text: "The most wholesome thing I've ever seen on the bus/train." },
   { category: 'Stranger Kindness', text: 'A piece of advice a local elder once gave me…' },
   { category: 'Stranger Kindness', text: 'An act of kindness I witnessed…' },
-  { category: 'Stranger Kindness', text: 'A bus driver/city worker that I should\'ve thanked.' },
-
+  { category: 'Stranger Kindness', text: "A bus driver/city worker that I should've thanked." },
 
   // Community Memories
   { category: 'Community Memories', text: 'A business that is gone now that I still think about.' },
@@ -36,21 +35,21 @@ export const prompts = [
   { category: 'Community Memories', text: 'The moment I realized this neighbourhood was "home."' },
   { category: 'Community Memories', text: 'There was this art work in the city years ago…' },
 
-  // Thoughts & Opinions
-  { category: 'Thoughts & Opinions', text: 'Vancouver rains a lot, but it makes [Place] look beautiful.' },
-  { category: 'Thoughts & Opinions', text: 'My "Grey Sky" survival strategy.' },
-  { category: 'Thoughts & Opinions', text: 'The most "Vancouver" thing that has ever happened to me.' },
-  { category: 'Thoughts & Opinions', text: "I feel like people undersell Vancouver's [Specific Asset]." },
-  { category: 'Thoughts & Opinions', text: 'I think [Tourist Spot] is actually overhyped because...' },
-  { category: 'Thoughts & Opinions', text: 'My favorite way to spend a "Main Street" Saturday.' },
-  { category: 'Thoughts & Opinions', text: "The best bowl of ramen/pho/sushi I've had in the city." },
-  { category: 'Thoughts & Opinions', text: 'My relationship with the mountains is...' },
-  { category: 'Thoughts & Opinions', text: 'Why I choose to stay here despite the cost.' },
-  { category: 'Thoughts & Opinions', text: 'If Vancouver were a color, it would be...' },
-  { category: 'Thoughts & Opinions', text: 'The one thing I would change about the city if I were Mayor for a day.' },
-  { category: 'Thoughts & Opinions', text: 'My favorite place to go when I need to be completely alone.' },
-  { category: 'Thoughts & Opinions', text: 'Vancouver is my [1st/2nd/Chosen] home.' },
-  { category: 'Thoughts & Opinions', text: 'My favorite thrift find in a Vancouver shop.' },
+  // Dear diary, today...
+  { category: 'Dear diary, today...', text: 'Vancouver rains a lot, but it makes [Place] look beautiful.' },
+  { category: 'Dear diary, today...', text: 'My "Grey Sky" survival strategy.' },
+  { category: 'Dear diary, today...', text: 'The most "Vancouver" thing that has ever happened to me.' },
+  { category: 'Dear diary, today...', text: "I feel like people undersell Vancouver's [Specific Asset]." },
+  { category: 'Dear diary, today...', text: 'I think [Tourist Spot] is actually overhyped because...' },
+  { category: 'Dear diary, today...', text: 'My favorite way to spend a "Main Street" Saturday.' },
+  { category: 'Dear diary, today...', text: "The best bowl of ramen/pho/sushi I've had in the city." },
+  { category: 'Dear diary, today...', text: 'My relationship with the mountains is...' },
+  { category: 'Dear diary, today...', text: 'Why I choose to stay here despite the cost.' },
+  { category: 'Dear diary, today...', text: 'If Vancouver were a color, it would be...' },
+  { category: 'Dear diary, today...', text: 'The one thing I would change about the city if I were Mayor for a day.' },
+  { category: 'Dear diary, today...', text: 'My favorite place to go when I need to be completely alone.' },
+  { category: 'Dear diary, today...', text: 'Vancouver is my [1st/2nd/Chosen] home.' },
+  { category: 'Dear diary, today...', text: 'My favorite thrift find in a Vancouver shop.' },
 
   // Arrivals & Departures
   { category: 'Arrivals & Departures', text: 'My very first day in Vancouver: I felt...' },
@@ -105,12 +104,12 @@ export const prompts = [
 ]
 
 export const PROMPT_CATEGORIES = [
-  'Love & Romance',
-  'Stranger Kindness',
-  'Community Memories',
-  'Thoughts & Opinions',
-  'Arrivals & Departures',
   'Confessions',
+  'Dear diary, today...',
+  'Love & Romance',
   "A Visitor's Note",
+  'Community Memories',
+  'Arrivals & Departures',
+  'Stranger Kindness',
   'Sparks & Musings',
 ]

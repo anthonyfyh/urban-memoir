@@ -5,14 +5,19 @@ export const categories = [
     description: "Got a secret crush or a story you can't tell anyone you know? This is your anonymous digital ear. Spill it to the city you love 😉",
   },
   {
+    name: 'Dear diary, today...',
+    emoji: '💭',
+    description: 'The soul of a city is found in its people. There is no story too small to share.',
+  },
+  {
     name: 'Love & Romance',
     emoji: '💌',
     description: 'From first dates at the Seawall to breakups in the rain. Share the moments that made your heart beat faster in Vancouver.',
   },
   {
-    name: 'Stranger Kindness',
-    emoji: '🤝',
-    description: 'Did someone hand you an umbrella or share a smile on the 99 B-Line? Pay it forward by sharing the small acts of grace that keep this city warm.',
+    name: "A Visitor's Note",
+    emoji: '✈️',
+    description: "Welcome to the Terminal City! Give us your first impressions and unabridged opinions! Tell us about the beauty, the rain, and everything in between through your fresh eyes.",
   },
   {
     name: 'Community Memories',
@@ -25,19 +30,14 @@ export const categories = [
     description: "Just landed at YVR or packing your last box? Whether you're starting a new chapter or saying a bittersweet goodbye, tell us why.",
   },
   {
-    name: "A Visitor's Note",
-    emoji: '✈️',
-    description: "Welcome to the Terminal City! Give us your first impressions and unabridged opinions! Tell us about the beauty, the rain, and everything in between through your fresh eyes.",
-  },
-  {
     name: 'Only in Vancouver',
     emoji: '✨',
     description: "For those 'only in Vancouver' moments. Did you see something curious, beautiful, or strange today? Tell us what Vancouver is about.",
   },
   {
-    name: 'Random Thoughts',
-    emoji: '💭',
-    description: 'No theme and no rules, just the stray thoughts that hit you while waiting for the SkyTrain.',
+    name: 'Stranger Kindness',
+    emoji: '🤝',
+    description: 'Did someone hand you an umbrella or share a smile on the 99 B-Line? Pay it forward by sharing the small acts of grace that keep this city warm.',
   },
   {
     name: 'Art & Creativity',
