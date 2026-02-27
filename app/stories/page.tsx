@@ -1,8 +1,9 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { supabase } from '@/lib/supabase'
 import Link from 'next/link'
 import { categories } from '@/lib/categories'
+import { useSearchParams, useRouter } from 'next/navigation'
 
 const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
 
@@ -24,12 +25,21 @@ function getDateCutoff(sort: SortOption): string | null {
   return null
 }
 
-export default function StoriesPage() {
+function StoriesPage() {
+  const searchParams = useSearchParams()
+  const router = useRouter()
+  const [showModal, setShowModal] = useState(searchParams.get('submitted') === 'true')
+
   const [stories, setStories] = useState<any[]>([])
   const [commentCounts, setCommentCounts] = useState<Record<number, number>>({})
   const [category, setCategory] = useState('All')
   const [sort, setSort] = useState<SortOption>('recent')
   const [loading, setLoading] = useState(true)
+
+  function dismissModal() {
+    setShowModal(false)
+    router.replace('/stories')
+  }
 
   useEffect(() => {
     fetchStories()
@@ -67,6 +77,37 @@ export default function StoriesPage() {
 
   return (
     <main className="min-h-screen bg-stone-50 px-6 py-12">
+
+      {/* Submission success modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-6" style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}>
+          <div className="bg-white rounded-2xl p-8 max-w-sm w-full shadow-xl text-center">
+            <p className="text-2xl mb-3">🎉</p>
+            <h2 className="text-lg font-semibold text-stone-800 mb-3">Thanks for sharing your story!</h2>
+            <p className="text-stone-500 text-sm leading-relaxed mb-6">
+              Feel free to read other people's submissions, or come say hi on our{' '}
+              <a
+                href="https://www.instagram.com/theurban_memoir?igsh=dmIycHB6cDhnamEy&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:opacity-80"
+                style={{ color: '#C4922A' }}
+              >
+                Instagram page
+              </a>
+              !
+            </p>
+            <button
+              onClick={dismissModal}
+              className="w-full text-white py-3 rounded-full hover:opacity-90 transition"
+              style={{ backgroundColor: '#1B4886' }}
+            >
+              Read the stories
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-2xl mx-auto">
         <Link href="/" className="text-stone-400 hover:text-stone-600 text-sm mb-8 block">← Back</Link>
         <h1 className="text-4xl font-bold mb-8" style={{ color: '#1B4886' }}>Stories of Vancouver</h1>
@@ -155,5 +196,13 @@ export default function StoriesPage() {
         </div>
       </div>
     </main>
+  )
+}
+
+export default function StoriesPageWrapper() {
+  return (
+    <Suspense fallback={<main className="min-h-screen bg-stone-50 flex items-center justify-center"><p className="text-stone-400">Loading...</p></main>}>
+      <StoriesPage />
+    </Suspense>
   )
 }

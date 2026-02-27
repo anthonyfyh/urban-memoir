@@ -75,7 +75,7 @@ function SubmitForm() {
       setError('Something went wrong. Please try again.')
       setSubmitting(false)
     } else {
-      router.push('/stories')
+      router.push('/stories?submitted=true')
     }
   }
 
