@@ -87,7 +87,7 @@ function StoriesPage() {
             <p className="text-stone-500 text-sm leading-relaxed mb-6">
               Feel free to read other people's submissions, or come say hi on our{' '}
               <a
-                href="https://www.instagram.com/theurban_memoir?igsh=dmIycHB6cDhnamEy&utm_source=qr"
+                href="https://www.instagram.com/urban._.memoir?igsh=dmIycHB6cDhnamEy&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:opacity-80"

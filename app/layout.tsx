@@ -24,7 +24,7 @@ export default function RootLayout({
         <footer className="bg-amber-50 px-6 py-8 border-t border-stone-200">
           <div className="max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <a
-              href="https://www.instagram.com/theurban_memoir?igsh=dmIycHB6cDhnamEy&utm_source=qr"
+              href="https://www.instagram.com/urban._.memoir?igsh=dmIycHB6cDhnamEy&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-stone-600 hover:text-stone-900 transition group"
